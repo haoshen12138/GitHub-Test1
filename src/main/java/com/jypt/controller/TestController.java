@@ -25,8 +25,8 @@ public class TestController {
     public Result<?> testDatabase() {
         try {
             // 测试数据库连接
-            List<Map<String, Object>> users = jdbcTemplate.queryForList("SELECT COUNT(*) as count FROM user");
-            List<Map<String, Object>> products = jdbcTemplate.queryForList("SELECT COUNT(*) as count FROM product");
+            List<Map<String, Object>> users = jdbcTemplate.queryForList("SELECT COUNT(*) as count "); // 添加反引号
+            List<Map<String, Object>> products = jdbcTemplate.queryForList("SELECT COUNT(*) as count"); // 添加反引号
 
             return Result.success(String.format(
                 "数据库连接成功！用户表记录数：%s，商品表记录数：%s",
