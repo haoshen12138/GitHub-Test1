@@ -65,4 +65,46 @@ public class UserController {
         }
         return Result.error("用户不存在");
     }
+
+    /**
+     * 根据用户名查询用户信息
+     * @param username 用户名
+     * @return 查询结果，成功返回用户信息，失败返回错误信息
+     */@GetMapping("/select")
+    public Result<?> getUserByUsername(@RequestParam String username) {
+         User user = userService.getUserByUsername(username);
+         if (user != null) {
+             return Result.success(user);
+         }
+         return Result.error("用户不存在");
+
+    }
+
+    /**
+     * 修改用户信息通过id
+     * @param user 修改后的用户信息
+     * @return 修改结果，成功返回"修改成功"，失败返回"修改失败"
+     */
+    @PutMapping("/update")
+    public Result<?> updateUser(@RequestBody User user) {
+        boolean success = userService.updateById(user);
+        if (success) {
+            return Result.success("修改成功");
+        }
+        return Result.error("修改失败");
+    }
+
+//    /**
+//     * 删除用户
+//     * @param id 用户ID
+//     * @return 删除结果，成功返回"删除成功"，失败返回"删除失败"
+//     */@DeleteMapping("/delete")
+//    public Result<?> deleteUser(@RequestParam Long id) {
+//         boolean success = userService.removeById(id);
+//         if (success) {
+//             return Result.success("删除成功");
+//         }
+//         return Result.error("删除失败");
+//    }
+
 }

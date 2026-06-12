@@ -34,3 +34,18 @@ CREATE TABLE IF NOT EXISTS `product` (
     KEY `idx_status` (`status`),
     CONSTRAINT `fk_product_user` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='商品表';
+
+-- 在现有表结构后添加以下内容
+
+
+-- 创建商品分类表
+CREATE TABLE IF NOT EXISTS `category` (
+                                          `id` BIGINT NOT NULL AUTO_INCREMENT COMMENT '分类ID',
+                                          `name` VARCHAR(50) NOT NULL COMMENT '分类名称',
+                                          `create_time` DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+                                          `update_time` DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+                                          PRIMARY KEY (`id`),
+                                          UNIQUE KEY `uk_name` (`name`)
+
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='商品分类表';
+
