@@ -6,6 +6,8 @@ import com.jypt.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Map;
+
 @RestController
 @RequestMapping("/api/user")
 /**
@@ -18,18 +20,15 @@ public class UserController {
 
     /**
      * 用户注册（自动设置默认密码123456）
-     * @param user 待注册的用户信息（不包含密码）
-     * @return 注册结果，成功返回"注册成功"，失败返回"用户名已存在"
+     * @param user 待注册的用户信息
+     * @return 注册结果
      */
     @PostMapping("/register")
     public Result<?> register(@RequestBody User user) {
-        // 检查用户名是否已存在
         if (userService.getUserByUsername(user.getUsername()) != null) {
             return Result.error("用户名已存在");
         }
-        // 设置默认密码为123456
         user.setPassword("123456");
-
         boolean success = userService.register(user);
         if (success) {
             return Result.success("注册成功");
@@ -39,14 +38,11 @@ public class UserController {
 
     /**
      * 根据用户名和密码登录
-     * @param user 包含用户名和密码的用户信息
-     * @return 登录结果，成功返回用户信息，失败返回错误信息
      */
     @PostMapping("/login")
     public Result<?> login(@RequestBody User user) {
         User loggedInUser = userService.login(user.getUsername(), user.getPassword());
         if (loggedInUser != null) {
-            // 返回用户信息（实际项目中应该返回token）
             return Result.success(loggedInUser);
         }
         return Result.error("用户名或密码错误");
@@ -54,8 +50,6 @@ public class UserController {
 
     /**
      * 根据id查询用户信息
-     * @param id 用户ID
-     * @return 查询结果，成功返回用户信息，失败返回错误信息
      */
     @GetMapping("/{id}")
     public Result<?> getUserById(@PathVariable Long id) {
@@ -68,43 +62,74 @@ public class UserController {
 
     /**
      * 根据用户名查询用户信息
-     * @param username 用户名
-     * @return 查询结果，成功返回用户信息，失败返回错误信息
-     */@GetMapping("/select")
+     */
+    @GetMapping("/select")
     public Result<?> getUserByUsername(@RequestParam String username) {
-         User user = userService.getUserByUsername(username);
-         if (user != null) {
-             return Result.success(user);
-         }
-         return Result.error("用户不存在");
-
+        User user = userService.getUserByUsername(username);
+        if (user != null) {
+            return Result.success(user);
+        }
+        return Result.error("用户不存在");
     }
 
     /**
-     * 修改用户信息通过id
-     * @param user 修改后的用户信息
-     * @return 修改结果，成功返回"修改成功"，失败返回"修改失败"
+     * 修改个人资料（仅允许昵称、手机、邮箱、头像）
+     * 禁止通过此接口修改密码和用户名
      */
     @PutMapping("/update")
     public Result<?> updateUser(@RequestBody User user) {
-        boolean success = userService.updateById(user);
-        if (success) {
-            return Result.success("修改成功");
+        if (user.getId() == null) {
+            return Result.error("用户ID不能为空");
         }
-        return Result.error("修改失败");
+        try {
+            User updated = userService.updateProfile(user);
+            return Result.success(updated);
+        } catch (RuntimeException e) {
+            return Result.error(e.getMessage());
+        }
     }
 
-//    /**
-//     * 删除用户
-//     * @param id 用户ID
-//     * @return 删除结果，成功返回"删除成功"，失败返回"删除失败"
-//     */@DeleteMapping("/delete")
-//    public Result<?> deleteUser(@RequestParam Long id) {
-//         boolean success = userService.removeById(id);
-//         if (success) {
-//             return Result.success("删除成功");
-//         }
-//         return Result.error("删除失败");
-//    }
+    /**
+     * 修改密码
+     * 请求体：{ "userId": 1, "oldPassword": "123456", "newPassword": "654321" }
+     */
+    @PutMapping("/change-password")
+    public Result<?> changePassword(@RequestBody Map<String, String> request) {
+        String userIdStr = request.get("userId");
+        String oldPassword = request.get("oldPassword");
+        String newPassword = request.get("newPassword");
 
+        if (userIdStr == null || oldPassword == null || newPassword == null) {
+            return Result.error("参数不完整：需要 userId、oldPassword、newPassword");
+        }
+        if (newPassword.length() < 6) {
+            return Result.error("新密码长度不能少于6位");
+        }
+        try {
+            boolean success = userService.changePassword(
+                    Long.valueOf(userIdStr), oldPassword, newPassword);
+            if (success) {
+                return Result.success("密码修改成功");
+            }
+            return Result.error("密码修改失败");
+        } catch (RuntimeException e) {
+            return Result.error(e.getMessage());
+        }
+    }
+
+    /**
+     * 删除用户（逻辑删除）
+     */
+    @DeleteMapping("/delete/{id}")
+    public Result<?> deleteUser(@PathVariable Long id) {
+        User user = userService.getById(id);
+        if (user == null) {
+            return Result.error("用户不存在");
+        }
+        boolean success = userService.removeById(id);
+        if (success) {
+            return Result.success("删除成功");
+        }
+        return Result.error("删除失败");
+    }
 }

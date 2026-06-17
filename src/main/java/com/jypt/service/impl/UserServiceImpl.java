@@ -68,4 +68,53 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         }
         return null;
     }
+
+    /**
+     * 修改密码：先验证旧密码，再更新为新密码
+     */
+    @Override
+    public boolean changePassword(Long userId, String oldPassword, String newPassword) {
+        // 查询用户
+        User user = this.getById(userId);
+        if (user == null) {
+            throw new RuntimeException("用户不存在");
+        }
+        // 对旧密码进行 MD5 加密后比对
+        String oldEncrypted = DigestUtils.md5DigestAsHex(
+                oldPassword.getBytes(StandardCharsets.UTF_8));
+        if (!user.getPassword().equals(oldEncrypted)) {
+            throw new RuntimeException("旧密码错误");
+        }
+        // MD5 加密新密码并更新
+        String newEncrypted = DigestUtils.md5DigestAsHex(
+                newPassword.getBytes(StandardCharsets.UTF_8));
+        user.setPassword(newEncrypted);
+        return this.updateById(user);
+    }
+
+    /**
+     * 更新个人资料：只允许修改昵称、手机、邮箱、头像
+     */
+    @Override
+    public User updateProfile(User user) {
+        User existing = this.getById(user.getId());
+        if (existing == null) {
+            throw new RuntimeException("用户不存在");
+        }
+        // 仅允许修改以下安全字段，防止篡改用户名和密码
+        if (user.getNickname() != null) {
+            existing.setNickname(user.getNickname());
+        }
+        if (user.getPhone() != null) {
+            existing.setPhone(user.getPhone());
+        }
+        if (user.getEmail() != null) {
+            existing.setEmail(user.getEmail());
+        }
+        if (user.getAvatar() != null) {
+            existing.setAvatar(user.getAvatar());
+        }
+        this.updateById(existing);
+        return existing;
+    }
 }

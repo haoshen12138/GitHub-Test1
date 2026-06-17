@@ -4,27 +4,46 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bf2b73f-0b92-4634-8a11-a93ecb2374ae" name="更改" comment="第二次提交的修改">
+    <list default="true" id="5bf2b73f-0b92-4634-8a11-a93ecb2374ae" name="更改" comment="第三次提交的修改">
       <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jypt-web/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jypt-web/src/api/user.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jypt-web/src/components/PublishDialog.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jypt-web/src/router/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jypt-web/src/styles/index.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jypt-web/src/utils/request.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jypt-web/src/views/Login.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jypt-web/src/views/Main.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jypt-web/src/views/NotFound.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jypt_web/src/api/cart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jypt_web/src/api/product.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jypt_web/src/api/transaction.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jypt_web/src/api/user.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jypt_web/src/router/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jypt_web/src/utils/request.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jypt_web/src/views/Cart.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jypt_web/src/views/Login.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jypt_web/src/views/Main.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jypt_web/src/views/MyOrders.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jypt_web/src/views/PersonalCenter.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jypt_web/src/views/ProductDetail.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jypt_web/src/views/PublishProduct.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jypt_web/src/views/SearchResult.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jypt_web/src/views/TransactionDetail.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jypt/common/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jypt/controller/CategoryController.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/jypt/controller/ProductController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jypt/entity/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jypt/controller/TransactionController.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/jypt/entity/Transaction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jypt/mapper/CategoryMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jypt/mapper/TransactionMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jypt/service/CartService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jypt/service/CategoryService.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/jypt/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jypt/service/TransactionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jypt/service/impl/CartServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jypt/service/impl/CategoryServiceImpl.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/jypt/service/impl/ProductServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jypt/service/impl/TransactionServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jypt/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jypt/controller/TestController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jypt/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jypt/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jypt/entity/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jypt/entity/Category.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jypt/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jypt/entity/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jypt/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jypt/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jypt/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jypt/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jypt/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jypt/service/impl/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/schema.sql" afterDir="false" />
     </list>
@@ -36,7 +55,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JavaScript File" />
         <option value="Class" />
+        <option value="Vue Composition API Component" />
       </list>
     </option>
   </component>
@@ -114,9 +135,40 @@
     &quot;HTTP 请求.generated-requests | #5.executor&quot;: &quot;Run&quot;,
     &quot;HTTP 请求.generated-requests | #50.executor&quot;: &quot;Run&quot;,
     &quot;HTTP 请求.generated-requests | #51.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP 请求.generated-requests | #52.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP 请求.generated-requests | #53.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP 请求.generated-requests | #54.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP 请求.generated-requests | #55.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP 请求.generated-requests | #57.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP 请求.generated-requests | #58.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP 请求.generated-requests | #59.executor&quot;: &quot;Run&quot;,
     &quot;HTTP 请求.generated-requests | #6.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP 请求.generated-requests | #60.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP 请求.generated-requests | #61.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP 请求.generated-requests | #63.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP 请求.generated-requests | #64.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP 请求.generated-requests | #65.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP 请求.generated-requests | #66.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP 请求.generated-requests | #67.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP 请求.generated-requests | #68.executor&quot;: &quot;Run&quot;,
     &quot;HTTP 请求.generated-requests | #7.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP 请求.generated-requests | #70.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP 请求.generated-requests | #71.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP 请求.generated-requests | #72.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP 请求.generated-requests | #73.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP 请求.generated-requests | #74.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP 请求.generated-requests | #75.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP 请求.generated-requests | #76.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP 请求.generated-requests | #77.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP 请求.generated-requests | #78.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP 请求.generated-requests | #79.executor&quot;: &quot;Run&quot;,
     &quot;HTTP 请求.generated-requests | #8.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP 请求.generated-requests | #80.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP 请求.generated-requests | #81.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP 请求.generated-requests | #82.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP 请求.generated-requests | #83.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP 请求.generated-requests | #84.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP 请求.generated-requests | #85.executor&quot;: &quot;Run&quot;,
     &quot;JavaScript 调试.Debug Application.executor&quot;: &quot;Run&quot;,
     &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
     &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
@@ -126,8 +178,9 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;Spring Boot.SecondhandApplication.executor&quot;: &quot;Run&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/JAVA/Idea练习/untitled2&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/JAVA/Idea练习/untitled2/jypt_web/src&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -141,27 +194,33 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;ts.external.directory.path&quot;: &quot;D:\\JAVA\\IDEA\\IntelliJ IDEA 2024.2.3\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;vue.recent.templates&quot;: [
+      &quot;Vue Composition API Component&quot;
+    ]
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\JAVA\Idea练习\untitled2\jypt_web\src" />
       <recent name="D:\JAVA\Idea练习\untitled2\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.SecondhandApplication">
-    <configuration name="generated-requests | #46" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="46" requestIdentifier="#46" runType="运行单个请求">
+  <component name="RunManager" selected="JavaScript 调试.Debug Application">
+    <configuration name="generated-requests | #81" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="81" requestIdentifier="#81" runType="运行单个请求">
       <method v="2" />
     </configuration>
-    <configuration name="generated-requests | #47" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="47" requestIdentifier="#47" runType="运行单个请求">
+    <configuration name="generated-requests | #82" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="82" requestIdentifier="#82" runType="运行单个请求">
       <method v="2" />
     </configuration>
-    <configuration name="generated-requests | #48" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="48" requestIdentifier="#48" runType="运行单个请求">
+    <configuration name="generated-requests | #83" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="83" requestIdentifier="#83" runType="运行单个请求">
       <method v="2" />
     </configuration>
-    <configuration name="generated-requests | #50" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="50" requestIdentifier="#50" runType="运行单个请求">
+    <configuration name="generated-requests | #84" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="84" requestIdentifier="#84" runType="运行单个请求">
       <method v="2" />
     </configuration>
-    <configuration name="generated-requests | #51" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="51" requestIdentifier="#51" runType="运行单个请求">
+    <configuration name="generated-requests | #85" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="85" requestIdentifier="#85" runType="运行单个请求">
       <method v="2" />
     </configuration>
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:5173">
@@ -176,11 +235,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="HTTP 请求.generated-requests | #51" />
-        <item itemvalue="HTTP 请求.generated-requests | #50" />
-        <item itemvalue="HTTP 请求.generated-requests | #48" />
-        <item itemvalue="HTTP 请求.generated-requests | #47" />
-        <item itemvalue="HTTP 请求.generated-requests | #46" />
+        <item itemvalue="HTTP 请求.generated-requests | #85" />
+        <item itemvalue="HTTP 请求.generated-requests | #84" />
+        <item itemvalue="HTTP 请求.generated-requests | #83" />
+        <item itemvalue="HTTP 请求.generated-requests | #82" />
+        <item itemvalue="HTTP 请求.generated-requests | #81" />
       </list>
     </recent_temporary>
   </component>
@@ -210,7 +269,16 @@
       <workItem from="1780992889333" duration="6084000" />
       <workItem from="1781078498059" duration="6880000" />
       <workItem from="1781230112618" duration="637000" />
-      <workItem from="1781231735563" duration="40000" />
+      <workItem from="1781231735563" duration="609000" />
+      <workItem from="1781232352238" duration="3638000" />
+      <workItem from="1781235999820" duration="344000" />
+      <workItem from="1781248435604" duration="690000" />
+      <workItem from="1781352528315" duration="10855000" />
+      <workItem from="1781405986715" duration="1483000" />
+      <workItem from="1781597932889" duration="6816000" />
+      <workItem from="1781606506234" duration="55000" />
+      <workItem from="1781607726837" duration="5609000" />
+      <workItem from="1781683120310" duration="2386000" />
     </task>
     <task id="LOCAL-00001" summary="第一次提交">
       <option name="closed" value="true" />
@@ -244,7 +312,15 @@
       <option name="project" value="LOCAL" />
       <updated>1780715157385</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="第三次提交的修改">
+      <option name="closed" value="true" />
+      <created>1781231942724</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1781231942724</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -265,6 +341,11 @@
     <MESSAGE value="第一次提交" />
     <MESSAGE value="第二次提交" />
     <MESSAGE value="第二次提交的修改" />
-    <option name="LAST_COMMIT_MESSAGE" value="第二次提交的修改" />
+    <MESSAGE value="第三次提交的修改" />
+    <option name="LAST_COMMIT_MESSAGE" value="第三次提交的修改" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
