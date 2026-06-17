@@ -41,6 +41,12 @@ public class Product {
     @TableField(fill = FieldFill.INSERT_UPDATE)
     private LocalDateTime updateTime;
 
+    /**
+     * 逻辑删除标识字段。
+     * 使用 @TableLogic 注解标记，表示启用 MyBatis-Plus 的逻辑删除功能。
+     * 当 deleted 值为 0 时表示记录未被删除，为 1 时表示记录已被逻辑删除。
+     * 数据库查询时会自动过滤掉已逻辑删除的记录（deleted = 1）。
+     */
     @TableLogic
     private Integer deleted;
 }
